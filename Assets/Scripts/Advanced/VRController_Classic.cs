@@ -6,42 +6,41 @@ using UnityEngine.XR;
 
 public class VRController_Classic : VRController
 {
-    
-    [System.Serializable]
-    public struct AxisButton
-    {
-       public bool isDown { get { return isDown; }set{ previousDownState = isDown;isDown = value;} }
-       private bool previousDownState;
-       public bool pressedDown { get { if (isDown && !previousDownState) { return true; } else { return false; } } }
-       public bool pressedUp { get { if (!isDown && previousDownState) { return true; } else { return false; } } }
-       public string axisName;
-       public float triggerPoint;
-       public float releasePoint;
 
-        public void UpdateAxis()
+    [SerializeField]
+    private List<VRButton_Base> buttonsUsed = new List<VRButton_Base>();
+
+    private Dictionary<string, VRButton_Base> librariedButtons = new Dictionary<string, VRButton_Base>();
+
+    private void Start()
+    {
+        foreach(VRButton_Base button in buttonsUsed)
         {
-            if (Input.GetAxis(axisName) <= releasePoint)
-            {
-                isDown = false;
-            }
-            if (Input.GetAxis(axisName) >= triggerPoint)
-            {
-                isDown = true;
+            if (librariedButtons.ContainsKey(button.buttonName)) {
+                librariedButtons.Add(button.buttonName, button);
             }
         }
     }
 
-    [SerializeField]
-    public AxisButton grabButton;
-    [SerializeField]
-    public AxisButton releaseButton;
-    
     private void UpdateControllers()
     {
-        grabButton.UpdateAxis();
-        releaseButton.UpdateAxis();
+        foreach(VRButton_Base button in buttonsUsed)
+        {
+            button.UpdateAxis();
+        }
     }
     
-
+    public VRButton_Base GetButton(string buttonName)
+    {
+        if (librariedButtons.ContainsKey(buttonName))
+        {
+            return librariedButtons[buttonName];
+        }
+        else
+        {
+            Debug.LogError("Failed to find button " + buttonName + " on object " + this.gameObject.name);
+            return new VRButton_Base();
+        }
+    }
     
 }

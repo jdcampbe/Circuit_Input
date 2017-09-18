@@ -30,11 +30,10 @@ public class VRInteractableObject_Parented : VRInteractableObject {
 
     public override void Grabbed(VRInput hand)
     {
-        //Intermediate
-        //if (this.GetComponent<Rigidbody>())
-        //{
-        //    this.GetComponent<Rigidbody>().isKinematic = true;
-        //}
+        if (this.GetComponent<Rigidbody>())
+        {
+            this.GetComponent<Rigidbody>().isKinematic = true;
+        }
         holder = hand;
         this.transform.parent = holder.transform;
     }
@@ -43,11 +42,10 @@ public class VRInteractableObject_Parented : VRInteractableObject {
     {
         if(holder == hand)
         {
-            //Intermediate
-            //if (this.GetComponent<Rigidbody>())
-            //{
-            //    this.GetComponent<Rigidbody>().isKinematic = false;
-            //}
+            if (this.GetComponent<Rigidbody>())
+            {
+                this.GetComponent<Rigidbody>().isKinematic = false;
+            }
             holder = null;
             this.transform.parent = null;
         }

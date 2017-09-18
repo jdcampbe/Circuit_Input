@@ -18,13 +18,13 @@ public class VRInput_Controller : VRInput {
     private void Start () {
 		if(hand == XRNode.LeftHand)
         {
-            activateAxis = "ActivateAxisL";
-            grabAxis = "GrabAxisL";
+            activateAxis = "LeftTrigger";
+            grabAxis = "LeftGrip";
         }
         else
         {
-            activateAxis = "ActivateAxisR";
-            grabAxis = "GrabAxisR";
+            activateAxis = "RightTrigger";
+            grabAxis = "RightGrip";
         }
 
 	}
@@ -113,7 +113,7 @@ public class VRInput_Controller : VRInput {
         {
             activatedObject.Deactivated(this);
         }
-        activatedObjects = null;
+        activatedObjects = new List<VRInteractableObject>();
     }
 
     private void OnTriggerEnter(Collider colliderEntered)

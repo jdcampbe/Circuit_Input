@@ -225,6 +225,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Advanced\Adv_VRInput.cs" />
+    <Compile Include="Assets\Scripts\Advanced\Adv_VRInput_Controller.cs" />
+    <Compile Include="Assets\Scripts\Advanced\Adv_VRInput_Gear.cs" />
+    <Compile Include="Assets\Scripts\Advanced\Adv_VRTeleport.cs" />
+    <Compile Include="Assets\Scripts\Advanced\VRButton_Axis.cs" />
+    <Compile Include="Assets\Scripts\Advanced\VRButton_Base.cs" />
+    <Compile Include="Assets\Scripts\Advanced\VRButton_Keycode.cs" />
     <Compile Include="Assets\Scripts\Advanced\VRController.cs" />
     <Compile Include="Assets\Scripts\Advanced\VRController_Classic.cs" />
     <Compile Include="Assets\Scripts\Intermediate\JoystickMovement_Controllers.cs" />

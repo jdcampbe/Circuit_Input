@@ -10,7 +10,7 @@ public class VRController : MonoBehaviour
     
 
     [SerializeField]
-    protected bool useFixedUpdate = false;
+    public bool useFixedUpdate = false;
 
     [SerializeField]
     protected bool trackPosition = false;
