@@ -5,7 +5,8 @@ using UnityEngine;
 public class VRButton_Base : ScriptableObject{
 
     public string buttonName = "";
-    public bool isDown { get { return isDown; } set { previousDownState = isDown; isDown = value; } }
+    private bool mIsDown = false;
+    public bool isDown { get { return mIsDown; } set { previousDownState = mIsDown; mIsDown = value; } }
     protected bool previousDownState;
     public bool pressedDown { get { if (isDown && !previousDownState) { return true; } else { return false; } } }
     public bool pressedUp { get { if (!isDown && previousDownState) { return true; } else { return false; } } }

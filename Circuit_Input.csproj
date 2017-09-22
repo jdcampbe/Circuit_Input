@@ -225,6 +225,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cube_ParentedPickup.cs" />
     <Compile Include="Assets\Scripts\Advanced\Adv_VRInput.cs" />
     <Compile Include="Assets\Scripts\Advanced\Adv_VRInput_Controller.cs" />
     <Compile Include="Assets\Scripts\Advanced\Adv_VRInput_Gear.cs" />
@@ -234,14 +235,33 @@
     <Compile Include="Assets\Scripts\Advanced\VRButton_Keycode.cs" />
     <Compile Include="Assets\Scripts\Advanced\VRController.cs" />
     <Compile Include="Assets\Scripts\Advanced\VRController_Classic.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\ColorObject.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\MoveObject_Constantly.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\MoveObject_ConstantlySmoothed.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\MoveObject_ForwardMoving.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\MoveObject_Once.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\RotateObject.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\ScaleObject_HardCoded.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table1\ScaleObject_Variable.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table2\Respawner.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table2\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table2\TriggerColourChange.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_KeyPressed.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_Trigger.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_TriggerActivate.cs" />
+    <Compile Include="Assets\Scripts\Intermediate\BulletController.cs" />
+    <Compile Include="Assets\Scripts\Intermediate\Int_BulletController.cs" />
     <Compile Include="Assets\Scripts\Intermediate\JoystickMovement_Controllers.cs" />
     <Compile Include="Assets\Scripts\Intermediate\JoystickMovement_Gear.cs" />
     <Compile Include="Assets\Scripts\Intermediate\VRInput.cs" />
     <Compile Include="Assets\Scripts\Intermediate\VRInput_Controller.cs" />
     <Compile Include="Assets\Scripts\Intermediate\VRInput_Gear.cs" />
+    <Compile Include="Assets\Scripts\Intermediate\VRInteractableObject.cs" />
+    <Compile Include="Assets\Scripts\Intermediate\VRInteractableObject_FixedJoint.cs" />
+    <Compile Include="Assets\Scripts\Intermediate\VRInteractableObject_Gun.cs" />
+    <Compile Include="Assets\Scripts\Intermediate\VRInteractableObject_Parented.cs" />
+    <Compile Include="Assets\Scripts\Intermediate\VRInteractableObject_PhysicsFollow.cs" />
     <Compile Include="Assets\Scripts\Intermediate\VRTeleport.cs" />
-    <Compile Include="Assets\Scripts\VRInteractableObject.cs" />
-    <Compile Include="Assets\Scripts\VRInteractableObject_Parented.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

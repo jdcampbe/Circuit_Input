@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Adv_VRInput : MonoBehaviour {
+public abstract class Adv_VRInput : MonoBehaviour {
     protected List<VRInteractableObject> heldObjects = new List<VRInteractableObject>();
     protected List<VRInteractableObject> activatedObjects = new List<VRInteractableObject>();
 

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VRInteractableObject : MonoBehaviour {
+[RequireComponent(typeof(Collider))]
+public abstract class VRInteractableObject : MonoBehaviour {
 
    
 	public virtual void Highlighted(VRInput hand)

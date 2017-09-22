@@ -86,7 +86,7 @@ public class Adv_VRInput_Controller : VRInput {
         {
             activatedObject.Deactivated(this);
         }
-        activatedObjects = null;
+        activatedObjects = new List<VRInteractableObject>();
     }
 
     private void OnTriggerEnter(Collider colliderEntered)

@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e47290b42352e1a468107b376d1df11a, type: 3}
   m_Name: Touch_A_Button
   m_EditorClassIdentifier: 
+  buttonName: AButton
   keycode: 330

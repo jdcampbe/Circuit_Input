@@ -16,13 +16,13 @@ public class VRController_Classic : VRController
     {
         foreach(VRButton_Base button in buttonsUsed)
         {
-            if (librariedButtons.ContainsKey(button.buttonName)) {
+            if (!librariedButtons.ContainsKey(button.buttonName)) {
                 librariedButtons.Add(button.buttonName, button);
             }
         }
     }
 
-    private void UpdateControllers()
+    public override void UpdateButtons()
     {
         foreach(VRButton_Base button in buttonsUsed)
         {
