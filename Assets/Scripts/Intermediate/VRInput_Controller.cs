@@ -8,8 +8,8 @@ public class VRInput_Controller : VRInput {
 
     public XRNode hand;
 
-    public List<VRInteractableObject> heldObjects = new List<VRInteractableObject>();
-    public List<VRInteractableObject> activatedObjects = new List<VRInteractableObject>();
+    List<VRInteractableObject> heldObjects = new List<VRInteractableObject>();
+    List<VRInteractableObject> activatedObjects = new List<VRInteractableObject>();
 
     protected string grabAxis = "";
     protected string activateAxis = "";

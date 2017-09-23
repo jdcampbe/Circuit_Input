@@ -64,6 +64,7 @@ public class VRInteractableObject_Gun : VRInteractableObject {
         if (!firing)
         {
             Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
+            firing = true;
         }
     }
 
