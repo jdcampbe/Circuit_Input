@@ -30,34 +30,36 @@ public class JoystickMovement_Gear : MonoBehaviour
     private void RotateLeftOrRight()
     {
 #if UNITY_EDITOR
-        //Computer
-        //this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("LeftRightComputer"));
-        this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("RightJoystickX"));
+        Debug.Log(Input.mouseScrollDelta.x);
+        this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
 #else
-    //Oculus Rift
-    //this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("RightJoystickX"));
-     //GearVR
-    //this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("Oculus_GearVR_LThumbstickX"));
+        //Oculus Rift
+        this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("LeftXJoystick"));
 #endif
-
-        //this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("RightJoystickX"));
-        //this.transform.RotateAround(head.position, Vector3.up, rotationSpeed * Time.deltaTime * Input.GetAxis("Oculus_GearVR_LThumbstickX"));
     }
 
 
     private void StrafeLeftOrRight()
     {
-        //this.transform.position +=
-        //    (new Vector3(head.right.x, 0f, head.right.z)).normalized *
-        //    movementSpeed * Time.deltaTime * Input.GetAxis("Oculus_GearVR_LThumbstickX");
-
+#if UNITY_EDITOR
         this.transform.position +=
             (new Vector3(head.right.x, 0f, head.right.z)).normalized *
-            movementSpeed * Time.deltaTime * Input.GetAxis("LeftJoystickX");
+            movementSpeed * Time.deltaTime * Input.GetAxis("KeyboardXAxis");
+#else
+        //Oculus Rift
+        this.transform.position +=
+            (new Vector3(head.right.x, 0f, head.right.z)).normalized *
+            movementSpeed * Time.deltaTime * Input.GetAxis("LeftXJoystick");
+#endif
     }
 
     private void MoveBackwardOrForward()
     {
+#if UNITY_EDITOR
+        this.transform.position +=
+            (new Vector3(head.forward.x, 0f, head.forward.z)).normalized
+            * movementSpeed * Time.deltaTime * Input.GetAxis("KeyboardYAxis");
+#else
         //Superman
         //this.transform.position += head.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Oculus_GearVR_LThumbstickY") ;
         //this.transform.position += head.forward * movementSpeed * Time.deltaTime * Input.GetAxis("LeftJoystickY");
@@ -65,7 +67,9 @@ public class JoystickMovement_Gear : MonoBehaviour
         //Flat Moving
         this.transform.position +=
             (new Vector3(head.forward.x, 0f, head.forward.z)).normalized
-            * movementSpeed * Time.deltaTime * Input.GetAxis("LeftJoystickY");
+            * movementSpeed * Time.deltaTime * Input.GetAxis("LeftYJoystick");
+#endif
+
 
 
     }

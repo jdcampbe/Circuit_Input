@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Cube_ParentedPickup : MonoBehaviour {
 
-    public KeyCode pickUpButton = KeyCode.JoystickButton0;
+    public string axisName = "RightTrigger";
 
     public void Update()
     {
-        if (Input.GetKeyUp(pickUpButton))
+        if (Input.GetAxis(axisName) < 0.5f)
         {
             DropCube();
         }
@@ -18,7 +18,7 @@ public class Cube_ParentedPickup : MonoBehaviour {
     {
         if (other.tag == "VRInput")
         {
-            if (Input.GetKeyDown(pickUpButton))
+            if (Input.GetAxis(axisName) >= 0.5f)
             {
                 PickUpCube(other.transform);
             }

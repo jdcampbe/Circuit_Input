@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MoveObject_ForwardMoving : MonoBehaviour {
 
-    public float speed = 1f;
+    public float speed = 2f;
+    public float lifeTime = 2f;
 
     // Use this for initialization
     void Start () {
+        Destroy(this.gameObject, lifeTime);
     }
 	
 	// Update is called once per frame

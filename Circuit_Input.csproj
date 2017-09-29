@@ -245,6 +245,10 @@
     <Compile Include="Assets\Scripts\Basic\Table2\Respawner.cs" />
     <Compile Include="Assets\Scripts\Basic\Table2\Spawner.cs" />
     <Compile Include="Assets\Scripts\Basic\Table2\TriggerColourChange.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_Axis.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_AxisActivate.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_AxisActivateSound.cs" />
+    <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_AxisTriggerSound.cs" />
     <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_KeyPressed.cs" />
     <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_Trigger.cs" />
     <Compile Include="Assets\Scripts\Basic\Table3\ClickerButton_TriggerActivate.cs" />

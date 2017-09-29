@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickerButton_Trigger : MonoBehaviour {
+public class ClickerButton_Trigger : MonoBehaviour
+{
 
     public KeyCode activationButton = KeyCode.JoystickButton1;
 
@@ -10,10 +11,11 @@ public class ClickerButton_Trigger : MonoBehaviour {
     public Transform buttonClicker;
     Vector3 clickerStartPosition;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         clickerStartPosition = buttonClicker.position;
-	}
+    }
 
     private void Update()
     {
@@ -25,7 +27,7 @@ public class ClickerButton_Trigger : MonoBehaviour {
 
     public void OnTriggerStay(Collider other)
     {
-        if(other.tag == "VRInput")
+        if (other.tag == "VRInput")
         {
             if (Input.GetKeyDown(activationButton))
             {
