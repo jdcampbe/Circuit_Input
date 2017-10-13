@@ -225,6 +225,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DebugButtons.cs" />
     <Compile Include="Assets\Scripts\Advanced\Adv_VRInput.cs" />
     <Compile Include="Assets\Scripts\Advanced\Adv_VRInput_Controller.cs" />
     <Compile Include="Assets\Scripts\Advanced\Adv_VRInput_Gear.cs" />

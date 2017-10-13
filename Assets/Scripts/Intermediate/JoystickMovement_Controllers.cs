@@ -8,6 +8,8 @@ public class JoystickMovement_Controllers : MonoBehaviour {
 
     public float rotationSpeed = 180f;
     public float movementSpeed = 3f;
+
+    public 
     
 	void Update () {
         //RotateLeftOrRight();

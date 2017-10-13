@@ -39,7 +39,7 @@ public class VRController_Classic : VRController
         else
         {
             Debug.LogError("Failed to find button " + buttonName + " on object " + this.gameObject.name);
-            return new VRButton_Base();
+            return null;
         }
     }
     

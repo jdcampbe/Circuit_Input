@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "VRButton_Axis", menuName = "CircuitStream/Axis", order = 1)]
+[CreateAssetMenu(fileName = "VRButton_Axis", menuName = "CircuitStream/Axis", order = 2)]
 public class VRButton_Axis:VRButton_Base {
     
-   public string axisName;
+    public string axisName;
     public float triggerPoint;
     public float releasePoint;
 

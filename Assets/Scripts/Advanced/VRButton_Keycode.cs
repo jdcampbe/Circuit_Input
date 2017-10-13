@@ -13,6 +13,7 @@ public class VRButton_Keycode:VRButton_Base {
         if (!Input.GetKey(keycode))
         {
             isDown = false;
+            
         }
         else
         {
